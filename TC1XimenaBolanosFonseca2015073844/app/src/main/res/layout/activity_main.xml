@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ximena.tc1_ximenabolanos_2015073844.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textViewMonto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnConvertir"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Monto"
+            android:textSize="30sp" />
+
+        <RadioGroup
+            android:id="@+id/RGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioBtnColonesDolares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="104dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked"
+                android:text="Colones-Dolares" />
+
+            <RadioButton
+                android:id="@+id/radioBtnDolaresColones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+
+                android:layout_weight="1"
+                android:checked="false"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked"
+                android:text="Dolares-Colones" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextMonto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:elevation="1dp"
+            android:onClick="onClickedButton"
+            android:text="Convertir" />
+
+        <EditText
+            android:id="@+id/editTextMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/RGroup"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Ingrese Valor a Convertir"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="167dp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
